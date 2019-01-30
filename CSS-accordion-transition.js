@@ -43,6 +43,9 @@ function ( qlik) {
 			export: false,
 			exportData : false
 		},
+		resize : function(){
+			console.log('resize')
+		},
 		paint: function ($element, layout) {
 			//add your rendering code here
 
@@ -51,6 +54,7 @@ function ( qlik) {
 			html = '<div class="slider-containers"><div class="slider-container"><div class="flexbox-slider flexbox-slider-' + effect + '">';
 			app.getList("sheet", function(reply){
 				reply.qAppObjectList.qItems.sort((obj1, obj2) => obj1.qData.rank-obj2.qData.rank).forEach(function(sheet){
+					//console.log(sheet['qInfo']['qId']);
 					if(sheet['qInfo']['qId'] != qlik.navigation.getCurrentSheetId().sheetId)
 						html += '<div class="flexbox-slide" id=' + sheet['qInfo']['qId'] + '> <img src=" ' + sheet.qData.thumbnail.qStaticContentUrl.qUrl +' " alt="Slide Image">             <div class="text-block">               <h3> ' + sheet['qMeta']['title'] + '</h3>               <div class="text">                 <p> ' + sheet['qMeta']['description'] + ' </p>               </div>             </div>           </div>           ';
 			})

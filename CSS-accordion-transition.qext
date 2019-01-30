@@ -1,14 +1,14 @@
 {
 	"name": "CSS-accordion-transition",
-	"description": "Basic empty visualization template",
+	"description": "Accordion sheet menu",
 	"type": "visualization",
 	"version": "1.0.0",
 	"icon": "extension",
-	"author": "",
-	"homepage": "",
+	"author": "Héctor Muñoz",
+	"homepage": "https://github.com/HectorMunoz/QS-Accordion-menu-transition",
 	"keywords": "qlik-sense, visualization",
-	"license": "",
-	"repository": "",
+	"license": "MIT",
+	"repository": "https://github.com/HectorMunoz/QS-Accordion-menu-transition",
 	"dependencies": {
 		"qlik-sense": ">=3.0.x"
 	}
